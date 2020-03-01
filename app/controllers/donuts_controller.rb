@@ -7,6 +7,7 @@ class DonutsController < ApplicationController
     @donuts = Donut.all
   end
 
+  
   # GET /donuts/1
   # GET /donuts/1.json
   def show
