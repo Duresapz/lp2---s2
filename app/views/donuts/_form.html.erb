@@ -1,0 +1,37 @@
+<%= form_with(model: donut, local: true) do |form| %>
+  <% if donut.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(donut.errors.count, "error") %> prohibited this donut from being saved:</h2>
+
+      <ul>
+      <% donut.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :donut_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :donut_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :donut_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nutriscore %>
+    <%= form.text_field :nutriscore, id: :donut_nutriscore %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
