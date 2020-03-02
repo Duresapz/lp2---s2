@@ -47,5 +47,9 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+group :production do
+  #Use pg as the database for Heroku production
+  gem 'pg', '~> 1.2.2'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
