@@ -50,6 +50,6 @@ end
 group :production do
   #Use pg as the database for Heroku production
   gem 'pg', '~> 1.2.2'
-
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
