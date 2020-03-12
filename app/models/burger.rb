@@ -3,7 +3,7 @@ class Burger < ApplicationRecord
         require 'openfoodfacts'
         product=openfoodfacts::Product.get(self.code, locale: 'fr')
         if product == nil
-            product = [["No Data"], [""]]
+            product = [[""], [""]]
         else
             product = product.nutriments
         end
