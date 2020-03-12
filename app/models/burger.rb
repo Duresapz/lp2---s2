@@ -5,7 +5,7 @@ class Burger < ApplicationRecord
         if @product == nil
             @json = {"No Data"=> "No code"}
         else
-            @json = @product.nutriments
+            @json = @product.nutriments.to_hash
         end
         return @json
     end
